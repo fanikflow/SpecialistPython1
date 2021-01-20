@@ -6,3 +6,26 @@
 # Выведите «YES», если можно отломить от шоколадки ровно k долек, и «NO» иначе.
 
 # TODO: your code here
+m = int(input("Введите количество долек с одной стороны:"))
+n = int(input("Введите количество долек с другой стороны:"))
+k = int(input("Введите количество долек, которые требуется отломить:"))
+
+i = 1
+y = 1
+while i<n:
+    if m == k/i:
+        #print (i)
+        print ("YES")
+        break
+    else:
+        i+=1
+if m != k/i:
+    while y<m:
+        if n == k/y:
+            #print (y)
+            print ("YES")
+            break
+        else:
+            y+=1
+    if n != k/y:
+        print ("NO")
