@@ -25,3 +25,25 @@
 # 2
 # Выходные данные-2:
 # 0
+def nik_problem(m,n,k):
+    
+    i = 1 
+    while i*k+1 <= m:
+        if i*k+1 == n:
+            #print("!")
+            price = 0
+            return price
+        elif i*k+1 < n < (i+1)*k+1:
+            #print("!!")
+            pr1 = ((i+1)*k+1 - n)*100
+            pr2 = (n - (i*k + 1))*200
+            price = min(pr1,pr2)
+            price = min(pr1,pr2)
+            return price
+        else:
+            #print("!!!")
+            i+=1
+    
+
+print(nik_problem(20,7,4))
+print(nik_problem(20,7,2))
